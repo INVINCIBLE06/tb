@@ -1,0 +1,17 @@
+FROM node:16.16.0
+
+ENV NODE_ENV=local
+WORKDIR /app
+
+EXPOSE 4121
+EXPOSE 4122
+EXPOSE 4126
+EXPOSE 4127
+EXPOSE 4123
+
+COPY . .
+RUN npm install --production
+
+#RUN npm run build
+
+CMD [ "npm", "run", "local" ]

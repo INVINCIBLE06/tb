@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1.0, width=device-width" />
+    <title>Tour Configuration</title>
+    <link rel="SHORTCUT ICON" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/css/chosen.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+
+<body>
+    <%- include('partials/header'),{moonstrideURL} %>
+        <!--#include file="modules/header.asp"-->
+        <div class="page-container clearfix">
+            <div class="top-control">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 col-md-5">
+                            <div class="d-flex">
+                                <a class="logo logo-outer-box text-center" href="#">
+                                    <img src="/images/error_icon.svg" alt="Error" width="30" height="30">
+                                </a>
+                                <h1 class="hd-type1 d-flex align-items-center ms-4" style="font-size: 30px;">Error
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-2">
+                            <div class="logo-outer-box text-center">
+                                <a class="logo" href="dashboard-fit.aspx">
+                                    <img src="/images/error-small-logo.png" alt="Tour Configuration" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="outer-box">
+                                <div class="inner-box-text">
+                                    <div class="hd-type1">
+                                        Tour Configuration Error
+                                    </div>
+                                    <div class="intigrate-text mt-4">
+                                        <span class="d-inline-block hd-type1 align-middle">
+                                            <b>
+                                                <%= errorMessage%>
+                                            </b>
+                                        </span>
+                                        <span style="display: none;">
+                                            <%= errorDescription%>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('partials/footer'),{moonstrideURL} %>
+</body>
+
+</html>

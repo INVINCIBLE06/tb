@@ -1,0 +1,25 @@
+.card-body{
+    margin: auto;
+    
+} 
+.row
+{
+    width: 100%; 
+    margin: auto;
+}
+
+.card{
+    margin: 10px;
+}
+
+.card-body-content{
+    margin: 5px;
+}
+
+.card:hover {
+    color: blue;
+    transform: scale(1.02);
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+

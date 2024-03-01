@@ -1,0 +1,15 @@
+/* This is a CSS specific to supplier.ejs. */ 
+
+button {
+  background-color: skyblue;
+  border-radius: 4px;
+  color: white;
+}
+
+:hover button{
+  background-color: blue;
+}
+
+#submit-button{
+  margin-top: 10px;
+}

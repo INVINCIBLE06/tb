@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1.0, width=device-width" />
+    <title>Tour Token Configuration</title>
+    <link rel="SHORTCUT ICON" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../css/chosen.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/source.css" />
+    <link rel="stylesheet" type="text/css" href="../css/token.css" />
+</head>
+
+<body class="location_mapping">
+    <%- include('partials/header'),{moonstrideURL} %>
+        <!-- inside header small header -->
+        <div class="page-container clearfix">
+            <div class="top-control">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 col-md-5">
+                            <div class="d-flex">
+
+                                <h1 class="hd-type1 d-flex align-items-center ms-3 mt-2" style="font-size: 20px;">
+                                    Connect with <%= providerName %>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- body part -->
+            <div class="page-content">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-4 justify-content-between">
+                            <div class="" style="cursor: pointer">
+                                <ul class="side-list ps-4">
+                                    <li class="dote">
+                                        <a class="token" data-id="sync-rules">
+                                           moonstride Configuration
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <form action="/saveMoonstrideConfiguration/<%= providerCode %>" method="post">
+                                <div class="inner-box-text"  id="sync-rules" style="display: none">
+                                    <div class="inner-box-text outer-box">
+                                        <div class="hd-type1 mb-3">
+                                            <span>Authorization</span>
+                                        </div>
+                                        <!-- access token url -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label ">Access Token URL</label>                                                    
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="accessTokenUrl" id="accessTokenUrl" placeholder="Please enter your access token url" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- client secret -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Client Secret</label>                                                    
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="clientSecret" id="clientSecret" placeholder="Please enter your client secret" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- UserId -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">User Id</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input  type="text" class="form-control" name="UserId" id="clientId" placeholder="Please enter your user id" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="hd-type1 mb-3 mt-5">
+                                            <span>Provider Endpoints</span>
+                                        </div>
+                                        <!-- Viator URL -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Viator URL</label>  
+                                                </div>
+                                                <div class="col-12 d-flex align-items-center providerEndpoints" style="column-gap: 5px;">                                                    
+                                                    <input type="checkbox"  name="viatorurlCheck" id="viatorurlCheck">                                                    
+                                                    <input type="text" class="form-control" name="viatorurl" id="viatorurl" placeholder="Please enter viator url" required>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <!-- 1way2italy url -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">1way2italy URL</label>  
+                                                </div>
+                                                <div class="col-12 d-flex align-items-center providerEndpoints" style="column-gap: 5px;">                                                    
+                                                    <input type="checkbox" name="onewaytoItalyurlCheck" id="onewaytoItalyurlCheck">                                                    
+                                                    <input type="text" class="form-control" name="onewaytoItalyurl" id="onewaytoItalyurl" placeholder="Please enter 1way2italy url" required>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="hd-type1 mb-3 mt-5">
+                                            <span>moonstride Endpoints</span>
+                                        </div>
+                                        <!-- moonstride token endpoint -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Booking Endpoint</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="bookingEndpoint" id="bookingEndpoint" placeholder="Please enter your Booking endpoint" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- search logs endpoint -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Search Logs Endpoint</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="searchLogsEndpoint" id="searchEndpoint" placeholder="Please enter your Search endpoint" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- passenger details endpoint -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Passenger Endpoint</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="passengerEndpoint" id="passengerEndpoint" placeholder="Please enter your Passenger endpoint" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Google Api url -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Google Api URL</label>  
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="googleapiurl" id="googleapiurl" placeholder="Please enter google api url" required>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <!-- Agent markup URl -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Agent markup URL</label>  
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="agentmarkupurl" id="agentmarkupurl" placeholder="Please enter Agent markup URL" required>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <!-- Save Booking question URL -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Save Booking question URL</label>  
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="savebookingquestionurl" id="savebookingquestionurl" placeholder="Please enter Save Booking question url" required>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <!-- Save Language Guide URL -->
+                                       <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label  class="form-label">Save Language Guide URL</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="savelanguageguideurl" id="savelanguageguideurl" placeholder="Please enter Save Language Guide Url" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" id="submit-button" class="btn btn-primary">
+                                                Save
+                                            </button>
+                                        </div>
+
+                                    </div>                                   
+                                </div>
+                            </form>
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer'),{moonstrideURL} %>
+</body>
+</html>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/chosen.jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        /* Chosen Select JS*/
+        $(".chzn-select").chosen();
+    });
+    $(".token").click(function (event) {
+        var popID = $(this).attr("data-id");
+        $("#setup,#sync-rules,#sync-date,#sync-run").css("display", "none");
+        $("#" + popID).css("display", "block");
+        // add finish class into current link
+        $('li.active').addClass('finish');
+        $("a[data-id='" + popID + "']").parent().addClass('active');
+    });
+    $(".token").click(function (event) {
+        $(this).toggleClass("active");
+    });
+</script>
+
+<script>
+    let provider_data = JSON.parse('<%-providerdetailsobject%>');
+    document.getElementById("accessTokenUrl").value = provider_data?.Access_token_URL || "";
+    document.getElementById("clientSecret").value = provider_data?.Client_secret || "";
+    document.getElementById("clientId").value = provider_data?.UserId || "";
+    document.getElementById("bookingEndpoint").value = provider_data?.Booking_Endpoint || "";
+    document.getElementById("searchEndpoint").value = provider_data?.Search_logs_EndPoint || "";
+    document.getElementById("passengerEndpoint").value = provider_data?.Passengers_Endpoint || "";
+    document.getElementById("viatorurl").value = provider_data?.viatorurl || "";
+    document.getElementById("onewaytoItalyurl").value = provider_data?.onewaytoItalyurl || "";
+    document.getElementById("googleapiurl").value = provider_data?.googleapiurl || "";
+    document.getElementById("agentmarkupurl").value = provider_data?.agentmarkupurl || "";
+    document.getElementById("savebookingquestionurl").value = provider_data?.savebookingquestionurl || "";
+    document.getElementById("savelanguageguideurl").value = provider_data?.savelanguageguideurl || "";
+    if(provider_data?.viatorurl != "" && provider_data?.viatorurl){
+        document.getElementById("viatorurlCheck").checked = true;
+    }
+    if(provider_data?.onewaytoItalyurl != "" && provider_data?.onewaytoItalyurl){
+        document.getElementById("onewaytoItalyurlCheck").checked = true;
+    }
+    // code to check the provider endpoints checkbox
+    let viatorurlCheckbox = document.querySelector("#viatorurlCheck");
+    let onewayurlCheckbox = document.querySelector("#onewaytoItalyurlCheck");
+    let viatorurlInput = document.querySelector("#viatorurl");
+    let onewayurlInput = document.querySelector("#onewaytoItalyurl");
+
+
+    viatorurlCheckbox.addEventListener('change', function(e){
+        if(viatorurlCheckbox.checked){
+            viatorurlInput.classList.add("active");
+        }else{
+            viatorurlInput.classList.remove("active");
+        };
+    });
+    onewayurlCheckbox.addEventListener('change', function(e){
+        if(onewayurlCheckbox.checked){
+            onewayurlInput.classList.add("active");
+        }else{
+            onewayurlInput.classList.remove("active");
+        };
+    });
+
+</script>

@@ -1,0 +1,32 @@
+@media (max-width: 1199px) {
+	.text-right{ text-align: left !important; }
+	.sync-btn.text-right{ text-align: right!important; }
+}
+.blue{ color: #1768e4;}
+.account-outer-box{
+	background: #fff;
+	border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.account-inner-box .hd-type1{
+	margin: 0 0 5px;
+	font-size: 18px;
+	line-height: 20px;
+}
+.account-text{
+	margin: 0 0 5px;
+	font-size: 14px;
+}
+.account-link{
+	color: #1768e4;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+}
+.account-link:hover{
+	color: #333333;
+}
+/*ACCOUNT-SYNC-PAGE*/
+
+.table td, .table th{ vertical-align: middle; }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1.0, width=device-width" />
+    <title>Tour Configuration</title>
+    <link rel="SHORTCUT ICON" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/css/chosen.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+
+<body>
+    <%- include('partials/header'),{moonstrideURL} %>
+        <div class="page-container clearfix">
+            <div class="top-control">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 col-md-5">
+                            <div class="d-flex">
+                                <a class="logo logo-outer-box text-center" href="#">
+                                    <img src="/images/true.png" alt="HotelConfiguration" width="30" height="30" />
+                                </a>
+                                <h1 class="hd-type1 d-flex align-items-center ms-4" style="font-size: 30px;">Success
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <div class="outer-box">
+                                <div class="inner-box-text">
+                                    <div class="hd-type2">
+                                        Tour Configuration
+                                    </div>
+                                    <div class="intigrate-text mt-3">
+                                        <span class="d-inline-block hd-type1 align-middle">
+                                            <b>
+                                                Message : <%= successMessage%>
+                                            </b>
+                                        </span>
+                                    </div>                                                                        
+
+                                    <a class="btn btn-primary ms-3 buttoncolor"
+                                        href="/accesssource/<%= providerCode %>">Back</a>
+                                          
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer'),{moonstrideURL} %>
+</body>
+
+<script type="text/javascript">
+    let copyText = document.querySelector(".copy-text");
+    copyText.querySelector("button").addEventListener("click", function () {
+        let input = copyText.querySelector("input.text");
+        input.select();
+        document.execCommand("copy");
+        copyText.classList.add("active");
+        window.getSelection().removeAllRanges();
+        setTimeout(function () {
+            copyText.classList.remove("active");
+        }, 2500);
+    });
+</script>
+
+</html>

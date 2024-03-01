@@ -1,0 +1,35 @@
+/* This file contains CSS specific to sourcelist.ejs*/
+
+.card-body{
+    text-align: center;
+    align-content: center;
+}
+
+.card-group{
+    width: 500px; 
+    margin: auto;
+}
+
+.card p{
+    text-align: justify;
+}
+
+.card-deck{
+    width: 75%;
+    margin: auto;
+}
+
+
+.card {
+    margin-top: 125px;
+    transition: transform 0.2s ease;
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 1.5em;
+  }
+
+.card:hover {
+    transform: scale(1.1);
+    background-color: #ddd;
+    cursor: pointer;
+}

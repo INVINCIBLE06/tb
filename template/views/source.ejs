@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1.0, width=device-width" />
+    <title>Tour Services Configuration</title>
+    <link rel="SHORTCUT ICON" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/css/chosen.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/source.css" />
+</head>
+
+<body class="<%= providerCode %>">
+    <%- include('partials/header'),{moonstrideURL} %>
+        <!-- inside header small header -->
+        <div class="page-container clearfix">
+            <div class="top-control">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 col-md-5">
+                            <div class="d-flex">
+
+                                <a class="logo logo-outer-box text-center" href="<%=providerURL%>" target="_blank">
+                                    <img src="/images/<%= providerCode %>.png" alt="Tour" width="30" height="30">
+                                </a>
+                                <h1 class="hd-type1 d-flex align-items-center ms-3 mt-2" style="font-size: 25px;">
+                                    <%= providerName %>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- body part -->
+            <div class="page-content">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-4 justify-content-between">
+                            <!-- provider configuration part -->
+                            <div class="" style="cursor: pointer">
+                                <ul class="side-list ps-4">
+                                    <li class="dote">
+                                        <a class="mapping" data-id="sync-rules">
+                                            Click here to access the <%= providerName %>.
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Third party api configuration -->
+                            <div class="" style="cursor: pointer">
+                                <ul class="side-list ps-4">
+                                    <li class="dote">
+                                        <a class="mapping" data-id="sync-ThridApi" >
+                                            Third-party Api Configuration
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <!-- configuration details adding form  -->
+                            <form action="/saveproviderdetails/<%= providerCode %>" method="post">
+                                <div class="inner-box-text" id="sync-rules" style="display: none">
+                                    <% if(providerCode === "VTR" ){%>                                        
+                                        <!---------- VTR METHOD START ------------>
+                                        <div class="inner-box-text outer-box">
+                                            <div class="Viator_access_fields" id="Viator_access_fields">
+                                                <div class="hd-type1">
+                                                    <span>Please enter the following details for <%= providerName %>.</span>
+                                                </div> 
+                                                <div>
+                                                    <label class="form-check-label mb-2" style="color: green;" id="responseData">
+                                                    <label class="form-check-label mb-2" style="color: red;" id="responseDataFail"></label>
+                                                </div> 
+                                                <!--------- viator url---------->
+                                                <div class="mb-3">
+                                                    <label for="Viator_url" class="form-label required-field">Viator Url: </label>
+                                                    <input type="text" class="form-control" name="Viator_url" id="Viator_url" placeholder="Please enter viator url">
+                                                </div>
+                                                <!---------------------->
+                                                <div class="mb-3">
+                                                    <label for="VTR_apiKey" class="form-label required-field">API Key:</label>
+                                                    <input type="text" class="form-control" name="VTR_apiKey"
+                                                        id="VTR_apiKey" placeholder="Please enter your API Key"
+                                                        required>
+                                                </div>
+
+                                                <div class="Hotel_isactive">
+                                                    <input checked type="checkbox" id="HS_isactive" name="isactive"
+                                                        onclick="calc()" />
+                                                    <label class="form-check-label mb-2" for="HS_isactive">
+                                                        Active
+                                                    </label>
+                                                </div>
+    
+                                                 <!--------------- Manual confirmation product filtering ------>
+                                                 <div class="layout_manual_confirmation mb-3">
+                                                    <div class="row"> 
+                                                        <div class="col-5">
+                                                        <label class="form-label">Allow Manual Confirmation?</label>
+                                                        </div>   
+                                                        <div class="col-7">
+                                                            <input class="input_manual_confirmation" type="radio" name="manualConfirm" id="manualConfirm_Yes" value="Yes"><label for="manualConfirm_Yes">Yes</label>
+                                                            <input class="input_manual_confirmation" type="radio" name="manualConfirm" id="manualConfirm_No" value="No" checked><label for="manualConfirm_No">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!----------- Destination caching -------------->
+                                                <% if(apiKeyExist) { %>
+                                                    <div class="mb-3">
+                                                        Update destination [last update : <span id="vtrDestinationUpdatedAt"></span>] :
+                                                        <a style="color: blue; 
+                                                                text-decoration: underline;
+                                                                cursor: pointer;" 
+                                                            id="submitButton"
+                                                        >
+                                                        click here 
+                                                        </a>
+                                                    </div>
+                                                <% } %>
+                                                <!---------------------------------------------->
+                                                <!---------------Booking questions caching ----->
+                                                <% if(apiKeyExist) { %>
+                                                    <div class="mb-3">
+                                                        Update Booking Questions [last update : <span id="vtrBookingQuestionsUpdatedAt"></span>] :
+                                                        <a style="color: blue; 
+                                                                text-decoration: underline;
+                                                                cursor: pointer;" 
+                                                            id="QuestionsubmitButton"
+                                                        >
+                                                        click here
+                                                        </a>
+                                                        <span id="QuestionUpdateResponse"></span>
+                                                    </div>
+                                                <% } %>
+                                                <!---------------------------------------------->
+                                                <!---------------Cancel Reason caching---------->
+                                                <%if(apiKeyExist){%>
+                                                    <div class="mb-3">
+                                                        Update Booking Cancel Reasons [last update : <span id="vtrCancelReasonsUpdatedAt"></span>] :
+                                                        <a style="color: blue;
+                                                                text-decoration: underline;
+                                                                cursor: pointer;"
+                                                            id="CancelReasonsubmitButton"
+                                                        >
+                                                        click here
+                                                        </a>
+                                                        <span id="CancelReasonUpdateResponse"></span>
+                                                    </div>
+                                                <%}%>
+                                                <!---------------------------------------------->
+                                            </div>                                         
+
+                                            <div class="layout_pickup_check mb-3">
+                                                <div class="row"> 
+                                                    <div class="col-12">
+                                                        <label class="form-label ">Do you want to display pickup/meeting points? ( Google API key)</label>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <input class="input_pickup_check" type="radio" name="pickup" id="Gloc_Show_Yes" value="Yes" checked ><label for="html">Show</label>&nbsp;
+                                                        <input class="input_pickup_check" type="radio" name="pickup" id="Gloc_Show_No" value="No"><label for="html">Hide</label>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <input type="text" class="form-control" name="Gloc_apiKey" id="Gloc_apiKey" placeholder="Please enter your google API Key" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="layout_check mb-3">
+                                                <div class="row"> 
+                                                    <div class="col-5">
+                                                        <label class="form-label ">Page layout:</label>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <input class="input_layout_check" type="radio" name="pageLayout" id="layout_LTR" value="LTR" checked ><label for="html">Left bar</label>
+                                                        <input class="input_layout_check" type="radio" name="pageLayout" id="layout_RTL" value="RTL"><label for="html">Right bar</label>
+                                                    </div>  
+                                                </div>  
+                                            </div>
+
+                                            <div class="layout_check mb-3">
+                                                <div class="row"> 
+                                                    <div class="col-5">
+                                                        <label class="form-label ">Show user reviews:</label>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <input class="input_reviews_check" type="radio" name="showReviews" id="reviews_Show_Yes" value="Yes" checked ><label for="html">Show</label>
+                                                        <input class="input_reviews_check" type="radio" name="showReviews" id="reviews_Show_No" value="No"><label for="html">Hide</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="layout_check mb-3">
+                                                <div class="row"> 
+                                                    <div class="col-5">
+                                                        <label class="form-label ">Show what to expect:</label>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <input class="input_whatToExpect_check" type="radio" name="whatToExpect" id="whatToExpect_Show_Yes" value="Yes" checked ><label for="html">Show</label>
+                                                        <input class="input_whatToExpect_check" type="radio" name="whatToExpect" id="whatToExpect_Show_No" value="No"><label for="html">Hide</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="layout_check mb-3">
+                                                <div class="row"> 
+                                                    <div class="col-5">
+                                                        <label class="form-label ">Show cancellation policy:</label>
+                                                    </div>   
+                                                    <div class="col-7">
+                                                        <input class="input_cancellationPolicy_check" type="radio" name="cancellationPolicy" id="cancellationPolicy_Show_Yes" value="Yes" checked ><label for="html">Show</label>
+                                                        <input class="input_cancellationPolicy_check" type="radio" name="cancellationPolicy" id="cancellationPolicy_Show_No" value="No"><label for="html">Hide</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="layout_check mb-3">
+                                                <div class="row"> 
+                                                    <div class="col-5">
+                                                        <label class="form-label ">Show supplier:</label>
+                                                    </div>   
+                                                    <div class="col-7">
+                                                        <input class="input_supplier_check" type="radio" name="supplier" id="supplier_Show_Yes" value="Yes" checked ><label for="html">Show</label>
+                                                        <input class="input_supplier_check" type="radio" name="supplier" id="supplier_Show_No" value="No"><label for="html">Hide</label>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+
+                                            <div class="d-flex mt-3">
+                                                <button type="submit" id="submit-button" class="btn btn-primary">
+                                                    Submit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    
+                                      <!---------- VTR METHOD END -------------->
+                                    <%} else if(providerCode === "OWT"){%>
+                                       <!---------- OWT METHOD START ------------>
+                                       <div class="inner-box-text outer-box">
+                                            <div class="Viator_access_fields" id="Viator_access_fields">
+                                                <div class="hd-type1">
+                                                    <span>Please enter following detail for the <%= providerName %>.</span>
+                                                </div>
+                                                <div>
+                                                    <label class="form-check-label mb-2" style="color: green;" id="owtResponseData">
+                                                    <label class="form-check-label mb-2" style="color: red;" id="owtResponseDataFail"></label>
+                                                </div> 
+                                                <!--------- 1way2italy url dev ---------->
+                                                <div class="mb-3">
+                                                    <label for="1way2italy_url" class="form-label required-field">1way2italy Url: </label>
+                                                    <input type="text" class="form-control" name="Oneway2italy_url" id="1way2italy_url" placeholder="Please enter 1way2italy url">
+                                                </div>
+                                                <!----------------------------------->
+                                                <div class="mb-3">
+                                                    <label for="OWT_requestorKey" class="form-label required-field">Requestor ID:
+                                                    </label>
+                                                    <input type="text" class="form-control" name="OWT_requestorKey" id="OWT_requestorKey" placeholder="Please enter your Requestor Id" pattern="[/^\S+$/]{3,}" required>
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="OWT_passKey" class="form-label required-field">Password:
+                                                    </label>
+                                                    <input type="password" class="form-control" name="OWT_passKey" id="OWT_passKey" placeholder="Please enter your Password" pattern="[/^\S+$/]{3,}" required>
+                                                </div>
+                                                
+                                            </div>
+                                            <% if(owtRequestorIdExist) { %>
+                                                <div class="mb-3">
+                                                    Update destination [last update : <span id="owtDestinationUpdatedAt"></span>] :
+                                                    <a style="color: blue; 
+                                                            text-decoration: underline;
+                                                            cursor: pointer;" 
+                                                        id="owtSubmitButton"
+                                                    >
+                                                    click here 
+                                                    </a>
+                                                </div>
+                                            <% } %>
+                                            <div class="Hotel_isactive">
+                                                <input checked type="checkbox" id="HS_isactive" name="isactive"
+                                                    onclick="calc()" />
+                                                <label class="form-check-label mb-2" for="HS_isactive">
+                                                    Active
+                                                </label>
+                                            </div>
+                                            <div class="layout_check mb-3">
+                                                <div class="row"> 
+                                                    <div class="col-5">
+                                                        <label class="form-label ">Page layout:</label>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <input class="input_layout_check" type="radio" name="pageLayout" id="layout_LTR" value="LTR" checked ><label for="html">Left bar</label>
+                                                        <input class="input_layout_check" type="radio" name="pageLayout" id="layout_RTL" value="RTL"><label for="html">Right bar</label>
+                                                    </div>  
+                                                </div>  
+                                            </div>
+                                            <!--  Default saerch category -->
+                                            <div class="layout_check mb-3">
+                                                <div class="row"> 
+                                                    <div class="col-5">
+                                                        <label class="form-label ">Default search filter:</label>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <input class="input_filter_check" type="radio" name="defaultCategory" id="activity" value="205"><label for="activity">Activity</label>
+                                                        <input class="input_filter_check" type="radio" name="defaultCategory" id="tour" value="202" checked><label for="tour">Tour</label>
+                                                        <input class="input_filter_check" type="radio" name="defaultCategory" id="transfer" value="201"><label for="transfer">Transfer</label>
+                                                    </div>  
+                                                </div>  
+                                            </div>
+                                            <!------------------------------>
+                                            <div class="layout_check mb-3">
+                                                <div class="row"> 
+                                                    <div class="col-5">
+                                                        <label class="form-label">Do you want to show supplier details:</label>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <input class="input_supplier_check" type="radio" name="showHideSupplier" id="supplier_Show_Yes" value="Yes" checked ><label for="html">Show</label>
+                                                        <input class="input_supplier_check" type="radio" name="showHideSupplier" id="supplier_Show_No" value="No"><label for="html">Hide</label>
+                                                    </div>  
+                                                </div>  
+                                            </div>
+                                            <div class="layout_check mb-3">
+                                                <div class="row"> 
+                                                    <div class="col-5">
+                                                    <label class="form-label ">Availabile supplier:</label>
+                                                    </div>   
+                                                    <div class="col-7">
+
+                                                        <input type="checkbox" id="CARRANI" class="available_suppliers" name="supplier" value="CARRANI">
+                                                        <label for="CARRANI">Carrani di Escursioni Italiane S.R.L.</label><br>
+                                                        <input type="checkbox" id="NITROTST" class="available_suppliers" name="supplier" value="NITROTST">
+                                                        <label for="NITROTST">Nitrodi Srl TEST</label><br>
+                                                        <input type="checkbox" id="NORMATST" class="available_suppliers" name="supplier" value="NORMATST">
+                                                        <label for="NORMATST">Norma Vacanze TEST</label><br>
+                                                        <input type="checkbox" id="DOGEOFV" class="available_suppliers" name="supplier" value="DOGEOFV">
+                                                        <label for="DOGEOFV">Belmondo</label><br>
+                                                        <input type="checkbox" id="ANXUR" class="available_suppliers" name="supplier" value="ANXUR">
+                                                        <label for="ANXUR">Anxur Tours Srl</label>
+
+                                                    </div>
+                                                </div>
+                                            </div>                                        
+                                            <div class="d-flex mt-3">
+                                                <button type="submit" id="submit-button" class="btn btn-primary">
+                                                    Submit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                      <!---------- OWT METHOD END -------------->
+                                </div>
+                            </form>
+                            <!----------------------------------------->
+
+                            <!-- Third party api configuration form -->
+                            <form action="/saveMoonstrideConfiguration/<%= providerCode %>" method="post">
+                                <div class="inner-box-text"  id="sync-ThridApi" style="display: none">
+                                    <div class="inner-box-text outer-box">
+                                        <div class="hd-type1 mb-3">
+                                            <span>Authorization</span>
+                                        </div>
+                                        <!-- access token url -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label ">Access Token URL</label>                                                    
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="accessTokenUrl" id="accessTokenUrl" placeholder="Please enter your access token url" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- client secret -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Client Secret</label>                                                    
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="clientSecret" id="clientSecret" placeholder="Please enter your client secret" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- UserId -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">User Id</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input  type="text" class="form-control" name="UserId" id="clientId" placeholder="Please enter your user id" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!------------ Moonstride details ---------->                                        
+                                        <div class="hd-type1 mb-3 mt-5">
+                                            <span>moonstride Endpoints</span>
+                                        </div>
+                                        <!-- moonstride base url -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Moonstride base URL</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="msBaseUrl" id="msBaseUrl" placeholder="Please enter your moonstride base url" required/>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                        <!-- moonstride token endpoint -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Booking Endpoint</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="bookingEndpoint" id="bookingEndpoint" placeholder="Please enter your Booking endpoint" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- search logs endpoint -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Search Logs Endpoint</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="searchLogsEndpoint" id="searchEndpoint" placeholder="Please enter your Search endpoint" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- passenger details endpoint -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Passenger Endpoint</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="passengerEndpoint" id="passengerEndpoint" placeholder="Please enter your Passenger endpoint" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Google Api url -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Google Api URL</label>  
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="googleapiurl" id="googleapiurl" placeholder="Please enter google api url" required>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <!-- Agent markup URl -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Agent markup URL</label>  
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="agentmarkupurl" id="agentmarkupurl" placeholder="Please enter Agent markup URL" required>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                         <!-- Agent commission URl -->
+                                         <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Agent commission URL</label>  
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="agentcommissionurl" id="agentcommissionurl" placeholder="Please enter Agent commission URL" required>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <!-- Save Booking question URL -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="form-label">Save Booking question URL</label>  
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="savebookingquestionurl" id="savebookingquestionurl" placeholder="Please enter Save Booking question url" required>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <!-- Save Language Guide URL -->
+                                       <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label  class="form-label">Save Language Guide URL</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="savelanguageguideurl" id="savelanguageguideurl" placeholder="Please enter Save Language Guide Url" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                           <!-- Save confirmed booking url -->
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label  class="form-label">Save And Confirm Booking Url</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" name="saveAndConfirmUrl" id="saveAndConfirmUrl" placeholder="Please enter Save And Confirm Booking Url" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" id="submit-button" class="btn btn-primary">
+                                                Save
+                                            </button>
+                                        </div>
+
+                                    </div>                                   
+                                </div>
+                            </form>
+                            <!---------------------------------------->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer'),{moonstrideURL} %>
+    </body>
+</html>
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/chosen.jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        /* Chosen Select JS*/
+        $(".chzn-select").chosen();
+    });
+    $(".mapping").click(function (event) {
+        var popID = $(this).attr("data-id");
+        $("#setup,#sync-rules,#sync-date,#sync-run, #sync-ThridApi").css("display", "none");
+        $('.side-list li, .side-list li a').removeClass('active');
+        $("#" + popID).css("display", "block");
+        // add finish class into current link
+        $('li.active').addClass('finish');
+        $("a[data-id='" + popID + "']").parent().addClass('active');
+    });
+    $(".mapping").click(function (event) {
+        $(this).toggleClass("active");
+    });
+</script>
+
+<script>
+    let providerCode = "<%=providerCode%>";
+
+    if (providerCode == "VTR" || providerCode == "OWT") {
+        document.getElementById("Viator_access_fields").style = "display:block";
+        document.getElementById("submit-button").style = "display:block";
+        document.getElementById("Viator_access_fields").required = true;
+        var nodes = document
+            .getElementById("Viator_access_fields")
+            .getElementsByTagName("*");
+        for (var i = 0; i < nodes.length; i++) {
+            if(nodes[i].type != "checkbox"){
+                nodes[i].required = true;
+            }            
+        }        
+    }
+
+</script>
+
+<script>
+    var provider_data = JSON.parse('<%-providerdetailsobject%>');
+    let ProviderCode = `<%= providerCode %>`;
+    // active box check 
+    let active = document.getElementById("HS_isactive");
+    active.checked = false;
+    if(provider_data.isactive){
+        active.checked = true;
+    }    
+
+    if(ProviderCode === "VTR"){
+        document.getElementById('Viator_url').value = provider_data?.Viator_url ||"";
+        document.getElementById('VTR_apiKey').value = provider_data?.Viator_apiKey || "";
+        document.getElementById('Gloc_apiKey').value = provider_data?.Gloc_apiKey || "";
+        let layoutButton = document.querySelectorAll('.input_layout_check')
+        for(let i = 0; i < layoutButton.length; i++){
+            if(provider_data.pageLayout == layoutButton[i].value){
+                layoutButton[i].checked = true;
+            }
+        }
+
+        // user reviews show
+        let userReviewsShow = document.querySelectorAll('.input_reviews_check');
+        for(let j = 0; j < userReviewsShow.length; j++){
+            if(provider_data.userReviewsShow == userReviewsShow[j].value){
+                userReviewsShow[j].checked = true;
+            }
+        }
+
+        // what to expect
+        let whatToExpectShow = document.querySelectorAll('.input_whatToExpect_check');
+        for(let k = 0; k < whatToExpectShow.length; k++){
+            if(provider_data.whatToExpect == whatToExpectShow[k].value){
+                whatToExpectShow[k].checked = true;
+            }
+        }
+
+        // cancellation policy
+        let cancellationPolicy = document.querySelectorAll('.input_cancellationPolicy_check');
+        for(let l = 0; l < cancellationPolicy.length; l++){
+            if(provider_data.showCancellationPolicy == cancellationPolicy[l].value){
+                cancellationPolicy[l].checked = true;
+            }
+        }
+
+        // supplier show hide
+        let supplier = document.querySelectorAll('.input_supplier_check');
+        for(let m = 0; m < supplier.length; m++){
+            if(provider_data.showSupplier == supplier[m].value){
+                supplier[m].checked = true;
+            }
+        }
+
+        // display pickup points
+        let pickup = document.querySelectorAll('.input_pickup_check');
+        for(let n = 0; n < pickup.length; n++){
+            if(provider_data.showPickup == pickup[n].value){
+                pickup[n].checked = true;
+            }
+        }
+
+        // Allow manual confirmation selection radio button check.
+        let manualConfirm = document.querySelectorAll('.input_manual_confirmation');
+        for(let m = 0; m < manualConfirm.length; m++){
+            if(provider_data?.manualConfirm && provider_data?.manualConfirm == manualConfirm[m].value){
+                manualConfirm[m].checked = true;
+            }
+        }
+
+        // google api key 
+        let showInput = document.getElementById('Gloc_Show_Yes');
+        let hideInput = document.getElementById('Gloc_Show_No');
+        let apiKeyInput = document.getElementById('Gloc_apiKey');
+
+        showInput.addEventListener('change', function () {
+            apiKeyInput.style.display = this.checked ? 'block' : 'none';
+        });
+
+        hideInput.addEventListener('change', function () {
+            apiKeyInput.style.display = this.checked ? 'none' : 'block';
+        });
+
+        // Initial state
+        apiKeyInput.style.display = showInput.checked ? 'block' : 'none';
+
+    }
+    else if(ProviderCode === "OWT"){
+        document.getElementById('1way2italy_url').value = provider_data?.Oneway2italy_url ||"";
+        // input fields id
+        document.getElementById('OWT_requestorKey').value = provider_data?.Requestor_ID || "";
+        // input fiels password
+        document.getElementById('OWT_passKey').value = provider_data?.Password || "";
+        // layout button
+
+        let layoutButton = document.querySelectorAll('.input_layout_check')
+        for(let i = 0; i < layoutButton.length; i++){
+            if(provider_data.pageLayout == layoutButton[i].value){
+                layoutButton[i].checked = true;
+            }
+        }
+
+        // suppliers checkbox
+        let availableSuppliers = document.querySelectorAll('.available_suppliers');
+        let selectedSuppliers = provider_data?.availableSuppliers || [];
+        
+        availableSuppliers.forEach(checkbox => {
+        let checkboxValue = checkbox.value;
+            if (selectedSuppliers.some(supplier => supplier.SupplierCode === checkboxValue)) {
+                checkbox.checked = true;
+            }
+        });
+
+        let defaultFilter = document.querySelectorAll('.input_filter_check')
+        for(let i = 0; i < defaultFilter.length; i++){
+            if(provider_data.defaultCategory == defaultFilter[i].value){
+                defaultFilter[i].checked = true;
+            }
+        }
+        
+        // supplier details show hide
+        let supplierShowHideCheck = document.querySelectorAll('.input_supplier_check');
+        for(let i = 0; i < supplierShowHideCheck.length; i++){
+            if(provider_data.showHideSupplier == supplierShowHideCheck[i].value){
+                supplierShowHideCheck[i].checked = true;
+            }
+        }
+    }
+    
+</script>
+
+<script>
+    // moonstride thirdparty configuration
+    let moonstrideConfiguration = JSON.parse('<%-moonstrideConfigurationObject%>')
+
+    document.getElementById("msBaseUrl").value = moonstrideConfiguration?.msBaseUrl || "";
+    document.getElementById("accessTokenUrl").value = moonstrideConfiguration?.Access_token_URL || "";
+    document.getElementById("clientSecret").value = moonstrideConfiguration?.Client_secret || "";
+    document.getElementById("clientId").value = moonstrideConfiguration?.UserId || "";
+    document.getElementById("bookingEndpoint").value = moonstrideConfiguration?.Booking_Endpoint || "";
+    document.getElementById("searchEndpoint").value = moonstrideConfiguration?.Search_logs_EndPoint || "";
+    document.getElementById("passengerEndpoint").value = moonstrideConfiguration?.Passengers_Endpoint || "";
+    document.getElementById("googleapiurl").value = moonstrideConfiguration?.googleapiurl || "";
+    document.getElementById("agentmarkupurl").value = moonstrideConfiguration?.agentmarkupurl || "";
+    document.getElementById("agentcommissionurl").value = moonstrideConfiguration?.agentcommissionurl || "";
+    document.getElementById("savebookingquestionurl").value = moonstrideConfiguration?.savebookingquestionurl || "";
+    document.getElementById("savelanguageguideurl").value = moonstrideConfiguration?.savelanguageguideurl || "";
+    document.getElementById("saveAndConfirmUrl").value = moonstrideConfiguration?.saveAndConfirmUrl || ""
+
+
+</script>
+
+<script>
+    function calc() {
+        if (document.getElementById('HS_isactive').value == "on") {
+            document.getElementById('HS_isactive').value = "true"
+        }
+        else {
+            document.getElementById('HS_isactive').value = "false"
+        }
+    }
+</script>
+
+<script>
+    let currentProvider = '<%= providerCode%>'
+    if(currentProvider == "VTR"){
+        // update location destination.
+        document.getElementById("submitButton").addEventListener("click", function (event) {
+            let requestUrl = '<%= requestUrl%>'
+            let providerCode = '<%= providerCode%>'
+            event.preventDefault();
+
+            const payload = {
+                provider: [providerCode]
+            };
+
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", requestUrl );
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    let resultData = JSON.parse(xhr.responseText) ?? []
+                    document.getElementById("responseData").innerText = resultData[0]?.Result
+                } else {
+                    console.error("Request failed with status: " + xhr.status);
+                    document.getElementById("responseDataFail").innerText = "Request failed with status: " + xhr.status
+                }
+            };
+            xhr.send(JSON.stringify(payload));
+        });
+
+        // booking questions caching
+        document.getElementById('QuestionsubmitButton').addEventListener('click', async (event) => {
+            event.preventDefault();
+            let questionUrl = '<%= questionCachingUrl%>'
+            
+            try {
+                const response = await fetch(questionUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },           
+                });
+
+                if (response.ok) {
+                    const responseData = await response.json();
+                    window.alert(responseData?.Result);
+                    console.log('Booking question caching Response :', responseData);
+                    // Do something with the response data
+                }
+                else {
+                    console.error('Error:', response.statusText);
+                }
+            }
+            catch (error) {
+                console.error('Error Booking question caching :', error);
+            }
+        });
+
+        // booking cancel reasons caching
+        document.getElementById('CancelReasonsubmitButton').addEventListener('click', async (event) => {
+            event.preventDefault();
+            let cancelReasonUrl = '<%= cancelReasonCachingUrl%>'
+
+            try {
+                const response = await fetch(cancelReasonUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },           
+                });
+
+                if (response.ok) {
+                    const responseData = await response.json();
+                    window.alert(responseData?.Result);
+                    console.log('Cancel Reason caching Response :', responseData);
+                    // Do something with the response data
+                }
+                else {
+                    console.error('Error:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error Cancel Reason caching :', error);
+            }
+        })
+
+        // Fetch JSON data from VTR (location)
+        let destinationLocation = '<%= destinationCachingLoc%>'
+        fetch(destinationLocation)
+            .then(response => response.json())
+            .then(data => {
+                const vtrDateStamp = new Date(data.dateStamp);
+                const vtrDay = String(vtrDateStamp.getDate()).padStart(2, '0');
+                const vtrMonth = String(vtrDateStamp.getMonth() + 1).padStart(2, '0'); // Month is zero-based
+                const vtrYear = vtrDateStamp.getFullYear();
+                const vtrUpdatedDate = `${vtrYear}-${vtrMonth}-${vtrDay}`
+                document.getElementById("vtrDestinationUpdatedAt").innerText = vtrUpdatedDate;
+            })
+            .catch(error => console.log(error));
+            
+        // Fetch JSON data from VTR (booking questions)
+        let bookingQuestionLocation = '<%= bookingQuestionsCachingLoc%>'
+        fetch(bookingQuestionLocation)
+        .then(response => response.json())
+        .then(data => {
+            const vtrDateStamp = new Date(data.dateStamp);
+            const vtrDay = String(vtrDateStamp.getDate()).padStart(2, '0');
+            const vtrMonth = String(vtrDateStamp.getMonth() + 1).padStart(2, '0'); // Month is zero-based
+            const vtrYear = vtrDateStamp.getFullYear();
+            const vtrUpdatedDate = `${vtrYear}-${vtrMonth}-${vtrDay}`
+            document.getElementById("vtrBookingQuestionsUpdatedAt").innerText = vtrUpdatedDate;
+        })
+        .catch(error => console.log(error));
+
+        // Fetch JSON data from VTR (cancel reasons)
+        let cancelReasonLocation = '<%= cancelReasonsCachingLoc%>'
+        fetch(cancelReasonLocation)
+        .then(response => response.json())
+        .then(data => {
+                const vtrDateStamp = new Date(data.timestamp);
+                const vtrDay = String(vtrDateStamp.getDate()).padStart(2, '0');
+                const vtrMonth = String(vtrDateStamp.getMonth() + 1).padStart(2, '0'); // Month is zero-based
+                const vtrYear = vtrDateStamp.getFullYear();
+                const vtrUpdatedDate = `${vtrYear}-${vtrMonth}-${vtrDay}`
+                document.getElementById("vtrCancelReasonsUpdatedAt").innerText = vtrUpdatedDate;
+        })
+        .catch(error => console.log(error));
+    }
+    else if(currentProvider == "OWT"){
+        document.getElementById("owtSubmitButton").addEventListener("click", function (event) {
+            let requestUrl = '<%= requestUrl%>'
+            let providerCode = '<%= providerCode%>'
+            event.preventDefault();
+
+            const payload = {
+                provider: [providerCode]
+            };
+
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", requestUrl );
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    let resultData = JSON.parse((xhr.responseText.replace(/\\/g, ''))) ?? []
+                    document.getElementById("owtResponseData").innerText = resultData[0]?.Message
+                } else {
+                    console.error("Request failed with status: " + xhr.status);
+                    document.getElementById("owtResponseDataFail").innerText = "Request failed with status: " + xhr.status
+                }
+            };
+            xhr.send(JSON.stringify(payload));
+        });
+
+        // Fetch JSON data from OWT
+        fetch('/destination_json/1Way2Italy-SupplierLocationDetails.json')
+            .then(response => response.json())
+            .then(data => {
+                const owtDateStamp = new Date(data.Created_Date);
+                const owtDay = String(owtDateStamp.getDate()).padStart(2, '0');
+                const owtMonth = String(owtDateStamp.getMonth() + 1).padStart(2, '0'); // Month is zero-based
+                const owtYear = owtDateStamp.getFullYear();
+                const owtUpdatedDate = `${owtYear}-${owtMonth}-${owtDay}`
+                document.getElementById("owtDestinationUpdatedAt").innerText = owtUpdatedDate;
+            })
+            .catch(error => console.error(error));
+        }
+    
+</script>

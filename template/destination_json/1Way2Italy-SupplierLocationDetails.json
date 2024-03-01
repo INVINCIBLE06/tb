@@ -1,0 +1,2027 @@
+{
+  "Data": [
+    {
+      "CityCode": "VCE",
+      "CityName": "VENICE",
+      "RegionCode": "VEN",
+      "RegionName": "VENETO",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "45.4408474",
+      "Longitude": "12.3155151",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 1
+    },
+    {
+      "CityCode": "ROM",
+      "CityName": "ROME",
+      "RegionCode": "LAZ",
+      "RegionName": "LAZIO",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "41.9027835",
+      "Longitude": "12.4963655",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 2
+    },
+    {
+      "CityCode": "MIL",
+      "CityName": "MILAN",
+      "RegionCode": "LOM",
+      "RegionName": "LOMBARDY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "45.4679603577",
+      "Longitude": "9.1817798615",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 3
+    },
+    {
+      "CityCode": "FLR",
+      "CityName": "FLORENCE",
+      "RegionCode": "TOS",
+      "RegionName": "TUSCANY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "43.7695604",
+      "Longitude": "11.2558136",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 4
+    },
+    {
+      "CityCode": "BLQ",
+      "CityName": "BOLOGNA",
+      "RegionCode": "EMR",
+      "RegionName": "EMILIA ROMAGNA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "44.494887",
+      "Longitude": "11.3426162",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 5
+    },
+    {
+      "CityCode": "ANP",
+      "CityName": "ANACAPRI",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.5546558",
+      "Longitude": "14.2105284",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 6
+    },
+    {
+      "CityCode": "URBI",
+      "CityName": "URBINO",
+      "RegionCode": "MAR",
+      "RegionName": "MARCHE",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "43.7262567",
+      "Longitude": "12.6365633",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 7
+    },
+    {
+      "CityCode": "TRN",
+      "CityName": "TURIN",
+      "RegionCode": "PIE",
+      "RegionName": "PIEDMONT",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "45.0703393",
+      "Longitude": "7.686864",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 8
+    },
+    {
+      "CityCode": "RADD",
+      "CityName": "RADDA IN CHIANTI",
+      "RegionCode": "TOS",
+      "RegionName": "TUSCANY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "43.5017642",
+      "Longitude": "11.3544525",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 9
+    },
+    {
+      "CityCode": "QPM",
+      "CityName": "PARMA",
+      "RegionCode": "EMR",
+      "RegionName": "EMILIA ROMAGNA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "44.801485",
+      "Longitude": "10.3279036",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 10
+    },
+    {
+      "CityCode": "VCEM",
+      "CityName": "MESTRE",
+      "AreaID": "VCE",
+      "AreaName": "VENICE",
+      "RegionCode": "VEN",
+      "RegionName": "VENETO",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "45.4934881",
+      "Longitude": "12.2463181",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 11
+    },
+    {
+      "CityCode": "VIET",
+      "CityName": "VIETRI SUL MARE",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.6679449",
+      "Longitude": "14.7278743",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 12
+    },
+    {
+      "CityCode": "SORR",
+      "CityName": "SORRENTO",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.6262925",
+      "Longitude": "14.3757985",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NITROTST"
+      ],
+      "destinationId": 13
+    },
+    {
+      "CityCode": "RAV",
+      "CityName": "RAVELLO",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.6491886",
+      "Longitude": "14.6117112",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 14
+    },
+    {
+      "CityCode": "QSR",
+      "CityName": "SALERNO",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.6824408",
+      "Longitude": "14.7680961",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 15
+    },
+    {
+      "CityCode": "PRJ",
+      "CityName": "CAPRI",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.5532009",
+      "Longitude": "14.222154",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NITROTST"
+      ],
+      "destinationId": 16
+    },
+    {
+      "CityCode": "POSI",
+      "CityName": "POSITANO",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.6280528",
+      "Longitude": "14.4849812",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NITROTST"
+      ],
+      "destinationId": 17
+    },
+    {
+      "CityCode": "POMP",
+      "CityName": "POMPEI",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.7461572",
+      "Longitude": "14.4989344",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 18
+    },
+    {
+      "CityCode": "NAP",
+      "CityName": "NAPLES",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.8517746",
+      "Longitude": "14.2681244",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NITROTST"
+      ],
+      "destinationId": 19
+    },
+    {
+      "CityCode": "MINO",
+      "CityName": "MINORI",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.6493713",
+      "Longitude": "14.6271881",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 20
+    },
+    {
+      "CityCode": "MAIO",
+      "CityName": "MAIORI",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.6512305",
+      "Longitude": "14.6433648",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 21
+    },
+    {
+      "CityCode": "AMAL",
+      "CityName": "AMALFI",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.6340026",
+      "Longitude": "14.6026805",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 22
+    },
+    {
+      "CityCode": "ISH",
+      "CityName": "ISCHIA",
+      "AreaID": "zISH",
+      "AreaName": "ISCHIA (ISLAND)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.7270164",
+      "Longitude": "13.9028656",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NITROTST"
+      ],
+      "destinationId": 23
+    },
+    {
+      "CityCode": "QCM",
+      "CityName": "COMO",
+      "AreaID": "zLAK",
+      "AreaName": "LAKES OF NORTH ITALY (LAKE)",
+      "RegionCode": "LOM",
+      "RegionName": "LOMBARDY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "45.8080597",
+      "Longitude": "9.0851765",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 24
+    },
+    {
+      "CityCode": "RAPA",
+      "CityName": "RAPALLO",
+      "AreaID": "zLIG",
+      "AreaName": "LIGURIA (SEA)",
+      "RegionCode": "LIG",
+      "RegionName": "LIGURIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "44.3498211",
+      "Longitude": "9.2338889",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 25
+    },
+    {
+      "CityCode": "GOA",
+      "CityName": "GENOA",
+      "AreaID": "zLIG",
+      "AreaName": "LIGURIA (SEA)",
+      "RegionCode": "LIG",
+      "RegionName": "LIGURIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "44.4056499",
+      "Longitude": "8.946256",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 26
+    },
+    {
+      "CityCode": "TREN",
+      "CityName": "TRENTO",
+      "AreaID": "zMTB",
+      "AreaName": "MOUNT BONDONE (MOUNTAIN)",
+      "RegionCode": "TAA",
+      "RegionName": "TRENTINO SOUTH TYROL",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "46.0747793",
+      "Longitude": "11.1217486",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 27
+    },
+    {
+      "CityCode": "SANV",
+      "CityName": "SAN GIOVANNI ROTONDO",
+      "AreaID": "zPUC",
+      "AreaName": "PUGLIA (SEA)",
+      "RegionCode": "PUG",
+      "RegionName": "APULIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "41.70659",
+      "Longitude": "15.7291788",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 28
+    },
+    {
+      "CityCode": "LCC",
+      "CityName": "LECCE",
+      "AreaID": "zPUC",
+      "AreaName": "PUGLIA (SEA)",
+      "RegionCode": "PUG",
+      "RegionName": "APULIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.3515155",
+      "Longitude": "18.1750161",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 29
+    },
+    {
+      "CityCode": "STTS",
+      "CityName": "SANTA TERESA GALLURA",
+      "AreaID": "zSAR",
+      "AreaName": "SARDINIA (SEA)",
+      "RegionCode": "SAR",
+      "RegionName": "SARDINIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "41.238987",
+      "Longitude": "9.1880794",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NORMATST"
+      ],
+      "destinationId": 30
+    },
+    {
+      "CityCode": "OLB",
+      "CityName": "OLBIA",
+      "AreaID": "zSAR",
+      "AreaName": "SARDINIA (SEA)",
+      "RegionCode": "SAR",
+      "RegionName": "SARDINIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.9235764",
+      "Longitude": "9.4964429",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 31
+    },
+    {
+      "CityCode": "CAG",
+      "CityName": "CAGLIARI",
+      "AreaID": "zSAR",
+      "AreaName": "SARDINIA (SEA)",
+      "RegionCode": "SAR",
+      "RegionName": "SARDINIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "39.2238411",
+      "Longitude": "9.1216613",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NITROTST"
+      ],
+      "destinationId": 32
+    },
+    {
+      "CityCode": "AHO",
+      "CityName": "ALGHERO",
+      "AreaID": "zSAR",
+      "AreaName": "SARDINIA (SEA)",
+      "RegionCode": "SAR",
+      "RegionName": "SARDINIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.5579517",
+      "Longitude": "8.3192949",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NITROTST"
+      ],
+      "destinationId": 33
+    },
+    {
+      "CityCode": "PMO",
+      "CityName": "PALERMO",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.11569",
+      "Longitude": "13.3614868",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NORMATST"
+      ],
+      "destinationId": 34
+    },
+    {
+      "CityCode": "TAOR",
+      "CityName": "TAORMINA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.8516366",
+      "Longitude": "15.2853127",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NORMATST"
+      ],
+      "destinationId": 35
+    },
+    {
+      "CityCode": "QIC",
+      "CityName": "SYRACUSE",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.0754739",
+      "Longitude": "15.2865861",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NITROTST",
+        "NORMATST"
+      ],
+      "destinationId": 36
+    },
+    {
+      "CityCode": "CTA",
+      "CityName": "CATANIA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.5078772",
+      "Longitude": "15.0830304",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NORMATST"
+      ],
+      "destinationId": 37
+    },
+    {
+      "CityCode": "CLG",
+      "CityName": "CALTAGIRONE",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.2380929",
+      "Longitude": "14.5126066",
+      "supplierChainCodes": [
+        "CARRANI",
+        "NORMATST"
+      ],
+      "destinationId": 38
+    },
+    {
+      "CityCode": "SIEN",
+      "CityName": "SIENA",
+      "AreaID": "zTCS",
+      "AreaName": "TUSCANY (COUNTRYSIDE)",
+      "RegionCode": "TOS",
+      "RegionName": "TUSCANY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "43.318809",
+      "Longitude": "11.3307574",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 39
+    },
+    {
+      "CityCode": "COLV",
+      "CityName": "COLLE DI VAL D'ELSA",
+      "AreaID": "zTCS",
+      "AreaName": "TUSCANY (COUNTRYSIDE)",
+      "RegionCode": "TOS",
+      "RegionName": "TUSCANY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "43.4199639",
+      "Longitude": "11.1272064",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 40
+    },
+    {
+      "CityCode": "PSA",
+      "CityName": "PISA",
+      "AreaID": "zTOS",
+      "AreaName": "TUSCANY (SEA)",
+      "RegionCode": "TOS",
+      "RegionName": "TUSCANY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "43.7228386",
+      "Longitude": "10.4016888",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 41
+    },
+    {
+      "CityCode": "TRS",
+      "CityName": "TRIESTE",
+      "AreaID": "zTRS",
+      "AreaName": "TRIESTE (SEA)",
+      "RegionCode": "FVG",
+      "RegionName": "FRIULI VENEZIA GIULIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "45.6495264",
+      "Longitude": "13.7768182",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 42
+    },
+    {
+      "CityCode": "VRN",
+      "CityName": "VERONA",
+      "AreaID": "zVCO",
+      "AreaName": "VENETO (COUNTRYSIDE)",
+      "RegionCode": "VEN",
+      "RegionName": "VENETO",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "45.4383842",
+      "Longitude": "10.9916215",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 43
+    },
+    {
+      "CityCode": "QPA",
+      "CityName": "PADUA",
+      "AreaID": "zVCO",
+      "AreaName": "VENETO (COUNTRYSIDE)",
+      "RegionCode": "VEN",
+      "RegionName": "VENETO",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "45.4064349",
+      "Longitude": "11.8767611",
+      "supplierChainCodes": [
+        "CARRANI"
+      ],
+      "destinationId": 44
+    },
+    {
+      "CityCode": "LIGA",
+      "CityName": "LIGNANO SABBIADORO",
+      "AreaID": "zJES",
+      "AreaName": "JESOLO (SEA)",
+      "RegionCode": "FVG",
+      "RegionName": "FRIULI VENEZIA GIULIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "45.6685554",
+      "Longitude": "13.1040857",
+      "supplierChainCodes": [
+        "DOGEOFV"
+      ],
+      "destinationId": 45
+    },
+    {
+      "CityCode": "LIDO",
+      "CityName": "LIDO DI JESOLO",
+      "AreaID": "zJES",
+      "AreaName": "JESOLO (SEA)",
+      "RegionCode": "VEN",
+      "RegionName": "VENETO",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "45.5063264",
+      "Longitude": "12.6457389",
+      "supplierChainCodes": [
+        "DOGEOFV"
+      ],
+      "destinationId": 46
+    },
+    {
+      "CityCode": "BIBI",
+      "CityName": "BIBIONE",
+      "AreaID": "zJES",
+      "AreaName": "JESOLO (SEA)",
+      "RegionCode": "VEN",
+      "RegionName": "VENETO",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "45.6361321",
+      "Longitude": "13.0614876",
+      "supplierChainCodes": [
+        "DOGEOFV"
+      ],
+      "destinationId": 47
+    },
+    {
+      "CityCode": "zISH",
+      "CityName": "ISCHIA (ISLAND)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "",
+      "Longitude": "",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 48
+    },
+    {
+      "CityCode": "PONZ",
+      "CityName": "PONTARLIER",
+      "CountryISOCode": "FR",
+      "CountryName": "FRANCE",
+      "Latitude": "46.9041039",
+      "Longitude": "6.354242",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 49
+    },
+    {
+      "CityCode": "PANT",
+      "CityName": "PANTELLERIA ISLAND",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "36.785262",
+      "Longitude": "11.9918779",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 50
+    },
+    {
+      "CityCode": "YPAL",
+      "CityName": "PALINURO",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.039308",
+      "Longitude": "15.2909364",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 51
+    },
+    {
+      "CityCode": "QTC",
+      "CityName": "CASERTA",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "41.2078354",
+      "Longitude": "14.1001326",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 52
+    },
+    {
+      "CityCode": "PROI",
+      "CityName": "PROCIDA",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.7578412",
+      "Longitude": "14.0150996",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 53
+    },
+    {
+      "CityCode": "PAES",
+      "CityName": "PAESTUM",
+      "AreaID": "zCAM",
+      "AreaName": "CAMPANIA (SEA)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.4231513",
+      "Longitude": "15.0071628",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 54
+    },
+    {
+      "CityCode": "VULC",
+      "CityName": "VULCANO",
+      "AreaID": "zEOL",
+      "AreaName": "AEOLIAN / EOLIE (ISLAND)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.3946132",
+      "Longitude": "14.970634",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 55
+    },
+    {
+      "CityCode": "STR3",
+      "CityName": "STROMBOLI",
+      "AreaID": "zEOL",
+      "AreaName": "AEOLIAN / EOLIE (ISLAND)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.7925148",
+      "Longitude": "15.214917",
+      "supplierChainCodes": [
+        "NITROTST",
+        "NORMATST"
+      ],
+      "destinationId": 56
+    },
+    {
+      "CityCode": "LPR",
+      "CityName": "LIPARI",
+      "AreaID": "zEOL",
+      "AreaName": "AEOLIAN / EOLIE (ISLAND)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.4936623",
+      "Longitude": "14.9272044",
+      "supplierChainCodes": [
+        "NITROTST",
+        "NORMATST"
+      ],
+      "destinationId": 57
+    },
+    {
+      "CityCode": "SERF",
+      "CityName": "SERRARA FONTANA",
+      "AreaID": "zISH",
+      "AreaName": "ISCHIA (ISLAND)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.7096824",
+      "Longitude": "13.8923231",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 58
+    },
+    {
+      "CityCode": "LCO",
+      "CityName": "LACCO AMENO",
+      "AreaID": "zISH",
+      "AreaName": "ISCHIA (ISLAND)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.7502875",
+      "Longitude": "13.8903541",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 59
+    },
+    {
+      "CityCode": "FOI",
+      "CityName": "FORIO D'ISCHIA",
+      "AreaID": "zISH",
+      "AreaName": "ISCHIA (ISLAND)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.7382914",
+      "Longitude": "13.8605512",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 60
+    },
+    {
+      "CityCode": "CCI",
+      "CityName": "CASAMICCIOLA TERME",
+      "AreaID": "zISH",
+      "AreaName": "ISCHIA (ISLAND)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.7480596",
+      "Longitude": "13.9045238",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 61
+    },
+    {
+      "CityCode": "BARH",
+      "CityName": "BARANO D'ISCHIA",
+      "AreaID": "zISH",
+      "AreaName": "ISCHIA (ISLAND)",
+      "RegionCode": "CAM",
+      "RegionName": "CAMPANIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.709077",
+      "Longitude": "13.9140481",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 62
+    },
+    {
+      "CityCode": "GARS",
+      "CityName": "GARGANO AND TREMITI ISLANDS",
+      "AreaID": "zPUC",
+      "AreaName": "PUGLIA (SEA)",
+      "RegionCode": "PUG",
+      "RegionName": "APULIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "42.1637056",
+      "Longitude": "15.6119855",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 63
+    },
+    {
+      "CityCode": "USTC",
+      "CityName": "USTICA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.7031179",
+      "Longitude": "13.1682675",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 64
+    },
+    {
+      "CityCode": "SIC",
+      "CityName": "SICILY",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.5999938",
+      "Longitude": "14.0153557",
+      "supplierChainCodes": [
+        "NITROTST"
+      ],
+      "destinationId": 65
+    },
+    {
+      "CityCode": "LMP",
+      "CityName": "LAMPEDUSA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "35.5086218",
+      "Longitude": "12.59292",
+      "supplierChainCodes": [
+        "NITROTST",
+        "NORMATST"
+      ],
+      "destinationId": 66
+    },
+    {
+      "CityCode": "FAVI",
+      "CityName": "FAVIGNANA ISLAND",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.9267558",
+      "Longitude": "12.3063052",
+      "supplierChainCodes": [
+        "NITROTST",
+        "NORMATST"
+      ],
+      "destinationId": 67
+    },
+    {
+      "CityCode": "PIAZ",
+      "CityName": "PIAZZA ARMERINA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.372976",
+      "Longitude": "14.3559158",
+      "supplierChainCodes": [
+        "NITROTST",
+        "NORMATST"
+      ],
+      "destinationId": 68
+    },
+    {
+      "CityCode": "SAIZ",
+      "CityName": "SAN MICHELE DI GANZARIA",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.2801453",
+      "Longitude": "14.4266988",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 69
+    },
+    {
+      "CityCode": "SAFV",
+      "CityName": "SANTA FLAVIA",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.0817189",
+      "Longitude": "13.5253315",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 70
+    },
+    {
+      "CityCode": "RPS",
+      "CityName": "RIPOSTO",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.732124",
+      "Longitude": "15.2054271",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 71
+    },
+    {
+      "CityCode": "MMT",
+      "CityName": "MOTTA CAMASTRA",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.8943921",
+      "Longitude": "15.170137",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 72
+    },
+    {
+      "CityCode": "LING",
+      "CityName": "LINGUAGLOSSA",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.8427705",
+      "Longitude": "15.1417683",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 73
+    },
+    {
+      "CityCode": "GRAI",
+      "CityName": "GRANITI",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.8890113831",
+      "Longitude": "15.2234201431",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 74
+    },
+    {
+      "CityCode": "BUTA",
+      "CityName": "BUTERA",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.1913299561",
+      "Longitude": "14.1840696335",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 75
+    },
+    {
+      "CityCode": "FOS",
+      "CityName": "FONDACHELLO DI MASCALI",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.7516509",
+      "Longitude": "15.1935143",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 76
+    },
+    {
+      "CityCode": "BAGH",
+      "CityName": "BAGHERIA",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.0789178",
+      "Longitude": "13.512365",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 77
+    },
+    {
+      "CityCode": "POLR",
+      "CityName": "POLICORO",
+      "AreaID": "zBAS",
+      "AreaName": "BASILICATA (SEA)",
+      "RegionCode": "BAS",
+      "RegionName": "BASILICATA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.2141054",
+      "Longitude": "16.6796558",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 78
+    },
+    {
+      "CityCode": "SNCP",
+      "CityName": "SAN CATALDO (LECCE)",
+      "AreaID": "zPUC",
+      "AreaName": "PUGLIA (SEA)",
+      "RegionCode": "PUG",
+      "RegionName": "APULIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.3900533",
+      "Longitude": "18.3055965",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 79
+    },
+    {
+      "CityCode": "NTOR",
+      "CityName": "TORRE CANNE",
+      "AreaID": "zPUC",
+      "AreaName": "PUGLIA (SEA)",
+      "RegionCode": "PUG",
+      "RegionName": "APULIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.8404716",
+      "Longitude": "17.4700178",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 80
+    },
+    {
+      "CityCode": "MDGI",
+      "CityName": "MARINA DI GINOSA (GINOSA MARINA)",
+      "AreaID": "zPUC",
+      "AreaName": "PUGLIA (SEA)",
+      "RegionCode": "PUG",
+      "RegionName": "APULIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.4280089",
+      "Longitude": "16.8856933",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 81
+    },
+    {
+      "CityCode": "MANE",
+      "CityName": "MANFREDONIA",
+      "AreaID": "zPUC",
+      "AreaName": "PUGLIA (SEA)",
+      "RegionCode": "PUG",
+      "RegionName": "APULIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "41.6307347",
+      "Longitude": "15.9165105",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 82
+    },
+    {
+      "CityCode": "CAAY",
+      "CityName": "CASTELLANETA MARINA",
+      "AreaID": "zPUC",
+      "AreaName": "PUGLIA (SEA)",
+      "RegionCode": "PUG",
+      "RegionName": "APULIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.4700381",
+      "Longitude": "16.9363245",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 83
+    },
+    {
+      "CityCode": "STIT",
+      "CityName": "STINTINO",
+      "AreaID": "zSAR",
+      "AreaName": "SARDINIA (SEA)",
+      "RegionCode": "SAR",
+      "RegionName": "SARDINIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.8563584",
+      "Longitude": "8.2322355",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 84
+    },
+    {
+      "CityCode": "PALA",
+      "CityName": "PALAU",
+      "AreaID": "zSAR",
+      "AreaName": "SARDINIA (SEA)",
+      "RegionCode": "SAR",
+      "RegionName": "SARDINIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "41.1706779",
+      "Longitude": "9.3562094",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 85
+    },
+    {
+      "CityCode": "OSRO",
+      "CityName": "SORSO",
+      "AreaID": "zSAR",
+      "AreaName": "SARDINIA (SEA)",
+      "RegionCode": "SAR",
+      "RegionName": "SARDINIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.7968026",
+      "Longitude": "8.5750336",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 86
+    },
+    {
+      "CityCode": "CLN",
+      "CityName": "CALA GONONE",
+      "AreaID": "zSAR",
+      "AreaName": "SARDINIA (SEA)",
+      "RegionCode": "SAR",
+      "RegionName": "SARDINIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.2803536",
+      "Longitude": "9.6271755",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 87
+    },
+    {
+      "CityCode": "BAIS",
+      "CityName": "BAIA SARDINIA",
+      "AreaID": "zSAR",
+      "AreaName": "SARDINIA (SEA)",
+      "RegionCode": "SAR",
+      "RegionName": "SARDINIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "41.1402366",
+      "Longitude": "9.4762976",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 88
+    },
+    {
+      "CityCode": "AIE",
+      "CityName": "AGLIENTU",
+      "AreaID": "zSAR",
+      "AreaName": "SARDINIA (SEA)",
+      "RegionCode": "SAR",
+      "RegionName": "SARDINIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "41.0780406",
+      "Longitude": "9.1127432",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 89
+    },
+    {
+      "CityCode": "AGRU",
+      "CityName": "AGRUSTOS",
+      "AreaID": "zSAR",
+      "AreaName": "SARDINIA (SEA)",
+      "RegionCode": "SAR",
+      "RegionName": "SARDINIA",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "40.724093",
+      "Longitude": "9.708231",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 90
+    },
+    {
+      "CityCode": "ZAFF",
+      "CityName": "ZAFFERANA ETNEA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.7103828",
+      "Longitude": "15.0674317",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 91
+    },
+    {
+      "CityCode": "VADR",
+      "CityName": "VALDERICE",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.0369287",
+      "Longitude": "12.6121285",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 92
+    },
+    {
+      "CityCode": "TRAH",
+      "CityName": "TRABIA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.0006815",
+      "Longitude": "13.6461308",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 93
+    },
+    {
+      "CityCode": "TPS",
+      "CityName": "TRAPANI",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.0173505",
+      "Longitude": "12.5365171",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 94
+    },
+    {
+      "CityCode": "TERR",
+      "CityName": "TERRASINI",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.1514581",
+      "Longitude": "13.082736",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 95
+    },
+    {
+      "CityCode": "SEI",
+      "CityName": "SELINUNTE",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.5833724",
+      "Longitude": "12.8252177",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 96
+    },
+    {
+      "CityCode": "SCIC",
+      "CityName": "SCICLI",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "36.7932122",
+      "Longitude": "14.706973",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 97
+    },
+    {
+      "CityCode": "SCIA",
+      "CityName": "SCIACCA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.5085148",
+      "Longitude": "13.0816305",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 98
+    },
+    {
+      "CityCode": "SAVP",
+      "CityName": "SAN VITO LO CAPO",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.1750295",
+      "Longitude": "12.7334622",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 99
+    },
+    {
+      "CityCode": "SAEX",
+      "CityName": "TAORMINA-SANT'ALESSIO SICULO",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.922058",
+      "Longitude": "15.3469674",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 100
+    },
+    {
+      "CityCode": "REAL",
+      "CityName": "REALMONTE",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.3178158",
+      "Longitude": "13.4569571",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 101
+    },
+    {
+      "CityCode": "RAU",
+      "CityName": "RAGUSA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "36.9269273",
+      "Longitude": "14.7255129",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 102
+    },
+    {
+      "CityCode": "QMR",
+      "CityName": "MARSALA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.7981074",
+      "Longitude": "12.4372236",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 103
+    },
+    {
+      "CityCode": "QME",
+      "CityName": "MESSINA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.1937335",
+      "Longitude": "15.5542057",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 104
+    },
+    {
+      "CityCode": "QAO",
+      "CityName": "AGRIGENTO",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.3088512",
+      "Longitude": "13.5857528",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 105
+    },
+    {
+      "CityCode": "PMAR",
+      "CityName": "MARINA DI RAGUSA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "36.7834487",
+      "Longitude": "14.5520266",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 106
+    },
+    {
+      "CityCode": "NOTZ",
+      "CityName": "NOTO",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "36.8924433",
+      "Longitude": "15.0651945",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 107
+    },
+    {
+      "CityCode": "NCAS",
+      "CityName": "CASTEL DI TUSA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.0087876",
+      "Longitude": "14.2507183",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 108
+    },
+    {
+      "CityCode": "MODI",
+      "CityName": "MODICA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "36.8588355",
+      "Longitude": "14.7608152",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 109
+    },
+    {
+      "CityCode": "MAZZ",
+      "CityName": "TAORMINA-MAZZARÒ",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.853892",
+      "Longitude": "15.3007259",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 110
+    },
+    {
+      "CityCode": "LIDD",
+      "CityName": "LIDO DI MONDELLO",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.2023562",
+      "Longitude": "13.3264834",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 111
+    },
+    {
+      "CityCode": "LICA",
+      "CityName": "LICATA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.1017094",
+      "Longitude": "13.9373306",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 112
+    },
+    {
+      "CityCode": "LETA",
+      "CityName": "TAORMINA-LETOJANNI",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.8516366",
+      "Longitude": "15.2853127",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 113
+    },
+    {
+      "CityCode": "GIOO",
+      "CityName": "GIOIOSA MAREA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.1747825",
+      "Longitude": "14.8961736",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 114
+    },
+    {
+      "CityCode": "GIAD",
+      "CityName": "TAORMINA-GIARDINI NAXOS",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.8516366",
+      "Longitude": "15.2853127",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 115
+    },
+    {
+      "CityCode": "ERIC",
+      "CityName": "ERICE",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.0380892",
+      "Longitude": "12.5873511",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 116
+    },
+    {
+      "CityCode": "CINI",
+      "CityName": "PALERMO-CINISI",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.155087",
+      "Longitude": "13.1088097",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 117
+    },
+    {
+      "CityCode": "CEFA",
+      "CityName": "CEFALÙ",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.0337046",
+      "Longitude": "14.0174436",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 118
+    },
+    {
+      "CityCode": "CAP4",
+      "CityName": "CAMPOFELICE ROCCELLA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.9915657",
+      "Longitude": "13.8850946",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 119
+    },
+    {
+      "CityCode": "CAEK",
+      "CityName": "CASTELVETRANO",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.6785135",
+      "Longitude": "12.7917794",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 120
+    },
+    {
+      "CityCode": "BCO",
+      "CityName": "BRUCOLI",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.2819068",
+      "Longitude": "15.1883475",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 121
+    },
+    {
+      "CityCode": "AVM",
+      "CityName": "ALTAVILLA MILICIA",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.0393751",
+      "Longitude": "13.5476246",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 122
+    },
+    {
+      "CityCode": "ALCM",
+      "CityName": "ALCAMO",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.9783947",
+      "Longitude": "12.9686255",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 123
+    },
+    {
+      "CityCode": "ACIR",
+      "CityName": "ACIREALE",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.607802",
+      "Longitude": "15.166736",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 124
+    },
+    {
+      "CityCode": "SCOG",
+      "CityName": "SCOGLITTI",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "36.8933221",
+      "Longitude": "14.4288899",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 125
+    },
+    {
+      "CityCode": "PATT",
+      "CityName": "PATTI",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.1385192871",
+      "Longitude": "14.9666700363",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 126
+    },
+    {
+      "CityCode": "MAZR",
+      "CityName": "MAZARA DEL VALLO",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "37.6550933",
+      "Longitude": "12.5899615",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 127
+    },
+    {
+      "CityCode": "FURR",
+      "CityName": "FURNARI",
+      "AreaID": "zSIC",
+      "AreaName": "SICILY (SEA)",
+      "RegionCode": "SIC",
+      "RegionName": "SICILY",
+      "CountryISOCode": "IT",
+      "CountryName": "ITALY",
+      "Latitude": "38.1037406921",
+      "Longitude": "15.1232204437",
+      "supplierChainCodes": [
+        "NORMATST"
+      ],
+      "destinationId": 128
+    }
+  ],
+  "Total_Locations": 128,
+  "Created_Date": "2024-01-24T09:27:04.080Z"
+}

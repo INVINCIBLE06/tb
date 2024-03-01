@@ -1,0 +1,30 @@
+/* This file contains CSS specific to source.ejs file*/
+
+button {
+  background-color: skyblue;
+  border-radius: 4px;
+  color: white;
+}
+
+:hover button {
+  background-color: blue;
+}
+
+.buttoncolor {
+  background-color: blue;
+}
+
+.HotelBeds_access_fields {
+  display: none;
+}
+
+/* #submit-button{
+  margin-top: 10px;
+  display: none;
+} */
+
+.required-field::after {
+  content: "*";
+  color: red;
+  /* float: right; */
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1.0, width=device-width" />
+    <title>Tour Loaction Mapping</title>
+    <link rel="SHORTCUT ICON" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../css/chosen.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/source.css" />
+</head>
+
+<body class="location_mapping">
+    <%- include('partials/header'),{moonstrideURL} %>
+        <!-- inside header small header -->
+        <div class="page-container clearfix">
+            <div class="top-control">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 col-md-5">
+                            <div class="d-flex">
+
+                                <h1 class="hd-type1 d-flex align-items-center ms-3 mt-2" style="font-size: 20px;">
+                                    Loaction Mapping
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- body part -->
+            <div class="page-content">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-4 justify-content-between">
+                            <div class="" style="cursor: pointer">
+                                <ul class="side-list ps-4">
+                                    <li class="dote">
+                                        <a class="mapping" data-id="sync-rules">
+                                           Providers Location Mapping
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <form method="post" action="/saveLocationMapping" name="mappingForm">
+                                <div class="inner-box-text" id="sync-rules" style="display: none">
+                                    
+                                    <div class="inner-box-text outer-box">
+                                        <div class="Mapping_access_fields" id="Mapping_access_fields">
+                                            
+                                            <div class="mb-3">
+                                                <label for="select_provider" class="form-label required-field">Please Select Provider:
+                                                </label>
+                                                <select name="provider" id="Provider" class="form-control" required>
+                                                    <% for (let i = 0; i < mapping.provider.length; i++) { %>
+                                                        <option value="<%= mapping.provider[i].value %>"><%= mapping.provider[i].label %></option>
+                                                    <% } %>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="Mapping_access_fields" id="Mapping_access_fields">
+                                            
+                                            <div class="mb-3">
+                                                <label for="select_supplier" class="form-label required-field">Please Select Supplier:
+                                                </label>
+                                                <select name="suppliers" id="Supplier" class="form-control">
+                                                    <option value="1">supplier</option>
+                                                </select> 
+
+                                            </div>
+                                        </div>
+
+                                        <div class="Mapping_access_fields" id="Mapping_access_fields">
+                                            
+                                            <div class="mb-3">
+                                                <label for="select_country" class="form-label required-field">Please Select Country:
+                                                </label>                                             
+                                                    <select name="country" id="Country" class="form-control" required>
+                                                        <% for (let i = 0; i < mapping.country.length; i++) { %>
+                                                            <option value="<%= mapping.country[i].value %>"><%= mapping.country[i].label %></option>
+                                                        <% } %>
+                                                    </select>    
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- popup modal -->
+                                        <div class="d-flex mt-3">
+
+                                            <a href="#myModal" role="button" class="btn btn-lg btn-primary" data-bs-toggle="modal">
+                                                <svg height="16px" version="1.1" viewBox="0 0 24 16" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#ffffff" id="Core" transform="translate(-504.000000, -88.000000)"><g id="cloud-download" transform="translate(504.000000, 88.000000)"><path d="M19.4,6 C18.7,2.6 15.7,0 12,0 C9.1,0 6.6,1.6 5.4,4 C2.3,4.4 0,6.9 0,10 C0,13.3 2.7,16 6,16 L19,16 C21.8,16 24,13.8 24,11 C24,8.4 21.9,6.2 19.4,6 L19.4,6 Z M17,9 L12,14 L7,9 L10,9 L10,5 L14,5 L14,9 L17,9 L17,9 Z" id="Shape"/></g></g></g></svg>   
+                                                <span> Location Mapping </span></a>
+                                        
+                                        </div>
+
+                                        <div class="m-4">
+                                        
+                                            <!-- Modal HTML -->
+                                            <div id="myModal" class="modal fade" tabindex="-1">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">Map Your Locations</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Download EXCEL to map your location in moostride with corresponding Location. Upload the updated EXCEL once you have performed the mapping</p>
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <p><a href="#" role="button" class="btn btn-secondary popup-excel" onclick="jsFormSubmit('download')">
+                                                                        <svg height="16px" version="1.1" viewBox="0 0 24 16" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#ffffff" id="Core" transform="translate(-504.000000, -88.000000)"><g id="cloud-download" transform="translate(504.000000, 88.000000)"><path d="M19.4,6 C18.7,2.6 15.7,0 12,0 C9.1,0 6.6,1.6 5.4,4 C2.3,4.4 0,6.9 0,10 C0,13.3 2.7,16 6,16 L19,16 C21.8,16 24,13.8 24,11 C24,8.4 21.9,6.2 19.4,6 L19.4,6 Z M17,9 L12,14 L7,9 L10,9 L10,5 L14,5 L14,9 L17,9 L17,9 Z" id="Shape"/></g></g></g></svg>    
+                                                                        <span>Download Excel</span></a></p>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                     <p><a href="#" role="button" class="btn btn-secondary popup-excel" onclick="jsFormSubmit('upload')">
+                                                                        <svg height="16px" version="1.1" viewBox="0 0 24 16" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#ffffff" id="Core" transform="translate(-126.000000, -46.000000)"><g id="backup" transform="translate(126.000000, 46.000000)"><path d="M19.4,6 C18.7,2.6 15.7,0 12,0 C9.1,0 6.6,1.6 5.4,4 C2.3,4.4 0,6.9 0,10 C0,13.3 2.7,16 6,16 L19,16 C21.8,16 24,13.8 24,11 C24,8.4 21.9,6.2 19.4,6 L19.4,6 Z M14,9 L14,13 L10,13 L10,9 L7,9 L12,4 L17,9 L14,9 L14,9 Z" id="Shape"/></g></g></g></svg>
+                                                                        <span>Upload Excel</span></a></p>
+                                                                </div>
+                                                                <input type="text" id="action" name="action" hidden>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary popup-dismiss" data-bs-dismiss="modal">Dismiss</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer'),{moonstrideURL} %>
+</body>
+</html>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/chosen.jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        /* Chosen Select JS*/
+        $(".chzn-select").chosen();
+    });
+    $(".mapping").click(function (event) {
+        var popID = $(this).attr("data-id");
+        $("#setup,#sync-rules,#sync-date,#sync-run").css("display", "none");
+        $("#" + popID).css("display", "block");
+        // add finish class into current link
+        $('li.active').addClass('finish');
+        $("a[data-id='" + popID + "']").parent().addClass('active');
+    });
+    $(".mapping").click(function (event) {
+        $(this).toggleClass("active");
+    });
+</script>
+
+<script>
+    function jsFormSubmit(action){
+
+        switch(action){
+            case "download":
+
+                document.getElementById("action").value = "download";
+                mappingForm.submit();
+                //window.location.href = `/images/error-small-logo.png`;
+
+                break;
+            case "upload":
+                console.log("Upload");
+                mappingForm.submit();
+                break;
+            default:
+                break;
+        }
+    }
+</script>

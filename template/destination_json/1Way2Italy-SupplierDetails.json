@@ -1,0 +1,95 @@
+{
+  "Connection": [
+    {
+      "_attributes": {
+        "SupplierCode": "ANXUR",
+        "SupplierName": "Anxur Tours Srl",
+        "ConnectionStatus": "Test"
+      },
+      "AvailableLangID": [
+        {
+          "_text": "ru"
+        },
+        {
+          "_text": "es"
+        },
+        {
+          "_text": "fr"
+        },
+        {
+          "_text": "de"
+        },
+        {
+          "_text": "en"
+        },
+        {
+          "_text": "it"
+        }
+      ]
+    },
+    {
+      "_attributes": {
+        "SupplierCode": "CARRANI",
+        "SupplierName": "Carrani di Escursioni Italiane S.R.L.",
+        "ConnectionStatus": "Test"
+      },
+      "AvailableLangID": [
+        {
+          "_text": "es"
+        },
+        {
+          "_text": "en"
+        },
+        {
+          "_text": "it"
+        }
+      ]
+    },
+    {
+      "_attributes": {
+        "SupplierCode": "DOGEOFV",
+        "SupplierName": "Belmondo",
+        "ConnectionStatus": "Test"
+      },
+      "AvailableLangID": [
+        {
+          "_text": "ru"
+        },
+        {
+          "_text": "de"
+        },
+        {
+          "_text": "en"
+        },
+        {
+          "_text": "it"
+        }
+      ]
+    },
+    {
+      "_attributes": {
+        "SupplierCode": "NITROTST",
+        "SupplierName": "Nitrodi Srl TEST",
+        "ConnectionStatus": "Test"
+      },
+      "AvailableLangID": [
+        {
+          "_text": "de"
+        },
+        {
+          "_text": "it"
+        },
+        {
+          "_text": "en"
+        }
+      ]
+    },
+    {
+      "_attributes": {
+        "SupplierCode": "NORMATST",
+        "SupplierName": "Norma Vacanze TEST",
+        "ConnectionStatus": "Test"
+      }
+    }
+  ]
+}

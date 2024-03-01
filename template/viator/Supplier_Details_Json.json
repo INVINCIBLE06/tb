@@ -1,0 +1,20 @@
+{
+  "50820P143": {
+    "suppliers": [
+      {
+        "reference": "SUPPLIER-tNjBToLhwfnbIDhngy1zsQ==",
+        "name": "MTT Madagascar Travel and Tours",
+        "type": "BUSINESS",
+        "productCode": "50820P143",
+        "contact": {
+          "email": "6900245fa1ef597fbb47a013977e739f@tripadvisor.com",
+          "address": "MTT Tsiky Building, Lot VT 23 Bis Haute Ville Antananarivo All 101 MG",
+          "phone": "+14843207442",
+          "countryCode": "MG"
+        }
+      }
+    ],
+    "timeStamp": "2024-03-01T11:21:34.957Z",
+    "totalCount": 1
+  }
+}
